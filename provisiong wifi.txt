@@ -1,0 +1,11 @@
+let mac = declare("DeviceID.SerialNumber",{value:1}).value[0];
+let ssid="wificiudad_" + mac.substring(7);
+log("SSID: "+ssid);
+//declare("Device.WiFi.SSID.*",{value:Date.now()});
+declare("Device.WiFi.SSID.1.SSID",{value: Date.now()},{value:ssid});
+declare("Device.WiFi.SSID.1.Enable",{value: Date.now()},{value:true});
+declare("Device.WiFi.AccessPoint",null,{path:1}); //{value:"Device.WiFi.SSID.1"});
+declare("Device.WiFi.AccessPoint.1.SSIDReference",null,{value:"Device.WiFi.SSID.1"});
+declare("Device.WiFi.AccessPoint.1.Enable",{value: Date.now()},{value:true});
+declare("Device.WiFi.Radio.1.Enable",null,{value:true});
+
