@@ -1,0 +1,18 @@
+let version=declare("Device.Deviceinfo.SoftwareVersion",{value:1}).value[0];
+let archname=declare("Device.DeviceInfo.X_MIKROTIK_ArchName",{value:1}).value[0];
+log('device version (' +archname +'): ' + version);
+if (version>="6.45"){
+  log('No upgrade needed');
+  declare("Tags.UPGRADED",null,{value:true});
+  declare("Tags.UPGRADING",null,{value:false});
+} else {
+  log('upgrading firmware');
+  declare("Downloads.[FileType:1 Firmware Upgrade Image]",
+        {path: 1}, {path: 1});
+  declare("Downloads.[FileType:1 Firmware Upgrade Image].FileName",
+        {value: 1}, {value: "upgrade-"+archname+"-6.45.xml"});
+  declare("Downloads.[FileType:1 Firmware Upgrade Image].Download",
+        {value: 1}, {value: Date.now()});
+}
+        
+     
