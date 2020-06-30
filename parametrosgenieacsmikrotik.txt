@@ -24,3 +24,6 @@ genieacs-gui/config/summary_parameters.yml
 correr los siguientes scrips para para detener o arrancar genieacs
  /rutainstalacion/genieacs-gui/genieacs-stop.sh
  /rutainstalacion/genieacs-gui/genieacs-start.sh
+
+
+para mas parametros consultar https://wiki.mikrotik.com/tr069ref/current.html
