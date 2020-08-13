@@ -13,6 +13,8 @@ npm install libxmljs --unsafe-perm
 npm install -g genieacs --unsafe-perm 
 git clone https://github.com/zaidka/genieacs-gui 
 apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
+apt-get install nginx
+
 cd genieacs-gui 
 bundle
 cp config/summary_parameters-sample.yml config/summary_parameters.yml 
@@ -40,7 +42,7 @@ else
   tmux send-keys 'genieacs-fs' 'C-m'
   tmux split-window
   tmux send-keys 'cd /root/genieacs-gui' 'C-m'
-  tmux send-keys 'sudo rails server -b 0.0.0.0' 'C-m'
+  tmux send-keys 'sudo rails server -p 8080 -b 127.0.0.1' 'C-m'
   tmux select-layout tiled 2>/dev/null
   tmux rename-window 'GenieACS'
 
