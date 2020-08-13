@@ -1,3 +1,16 @@
+apt-get update 
+apt-get upgrade 
+#apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
+#cd /usr/src 
+#wget http://prdownloads.sourceforge.net/webadmin/webmin_1.910_all.deb
+#dpkg --install webmin_1.910_all.deb 
+apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev mysql-server mysql-client default-libmysqlclient-dev nginx
+cd ~ 
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+chmod +x nodesource_setup.sh
+./nodesource_setup.sh 
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - 
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list 
 apt-get update && apt-get install yarn
 apt-get install nodejs 
 npm install libxmljs --unsafe-perm 
