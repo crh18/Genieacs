@@ -45,7 +45,7 @@ else
   tmux send-keys 'genieacs-fs' 'C-m'
   tmux split-window
   tmux send-keys 'cd /root/genieacs-gui' 'C-m'
-  tmux send-keys 'sudo rails server -p 8080 -b 127.0.0.1' 'C-m'
+  tmux send-keys 'sudo rails server -b 0.0.0.0' 'C-m'
   tmux select-layout tiled 2>/dev/null
   tmux rename-window 'GenieACS'
 
