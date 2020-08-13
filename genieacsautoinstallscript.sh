@@ -1,20 +1,9 @@
-apt-get update 
-apt-get upgrade 
-apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev mysql-server mysql-client default-libmysqlclient-dev
-cd ~ 
-curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
-chmod +x nodesource_setup.sh
-./nodesource_setup.sh 
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - 
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list 
 apt-get update && apt-get install yarn
 apt-get install nodejs 
 npm install libxmljs --unsafe-perm 
 npm install -g genieacs --unsafe-perm 
 git clone https://github.com/zaidka/genieacs-gui 
 apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
-apt-get install nginx
-
 cd genieacs-gui 
 bundle
 cp config/summary_parameters-sample.yml config/summary_parameters.yml 
