@@ -1,10 +1,6 @@
 apt-get update 
 apt-get upgrade 
-#apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
-#cd /usr/src 
-#wget http://prdownloads.sourceforge.net/webadmin/webmin_1.910_all.deb
-#dpkg --install webmin_1.910_all.deb 
-apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev 
+apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev mysql-server mysql-client default-libmysqlclient-dev
 cd ~ 
 curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
@@ -43,8 +39,8 @@ else
   tmux split-window
   tmux send-keys 'genieacs-fs' 'C-m'
   tmux split-window
-  tmux send-keys 'cd genieacs-gui' 'C-m'
-  tmux send-keys 'rails server -b 0.0.0.0' 'C-m'
+  tmux send-keys 'cd /root/genieacs-gui' 'C-m'
+  tmux send-keys 'sudo rails server -b 0.0.0.0' 'C-m'
   tmux select-layout tiled 2>/dev/null
   tmux rename-window 'GenieACS'
 
