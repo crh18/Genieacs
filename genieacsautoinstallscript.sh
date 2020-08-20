@@ -4,7 +4,7 @@ apt-get upgrade
 #cd /usr/src 
 #wget http://prdownloads.sourceforge.net/webadmin/webmin_1.910_all.deb
 #dpkg --install webmin_1.910_all.deb 
-apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev libmysqlclient-dev lighttpd mysql-server mysql-client
+apt-get install redis-server mongodb npm build-essential ruby-bundler ruby-dev libsqlite3-dev libmysqlclient-dev mysql-server mysql-client nginx
 cd ~ 
 curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 chmod +x nodesource_setup.sh
